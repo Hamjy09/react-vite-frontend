@@ -32,20 +32,20 @@ const Navbar = () => {
         </div>
 
         {/* Search input for md and above */}
-        <div className="relative md:flex hidden flex-1 mx-4">
+        <div className=" relative md:flex justify-center hidden  mx-2">
           <input
             type="text"
-            placeholder="Search"
-            className="w-full pl-10 pr-3 py-2 border rounded-2xl border-blue-300 focus:outline-none focus:bg-blue-100"
+            placeholder="Search..."
+            className="w-80  pl-10 pr-1 py-2 border rounded-2xl border-blue-300 focus:outline-none focus:bg-blue-100"
           />
           <FontAwesomeIcon
             icon="fa-solid fa-search"
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-500 cursor-pointer"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 text-blue-500 cursor-pointer"
           />
         </div>
 
         {/* Other icons */}
-        <div className="flex gap-4 md:gap-6 items-center">
+        <div className="flex gap-4 md:gap-6 items-center mr-3">
           {/* Search icon for mobile hidden on md and above */}
           <div className="block md:hidden">
             <FontAwesomeIcon
