@@ -1,7 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
+
 @theme {
   --font-jakarta: "Plus Jakarta Sans", sans-serif; 
 }
 
+@layer utilities {
+  @keyframes custom-bounce {
+    0%, 100% {
+      transform: translateY(-40%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: custom-bounce 2s infinite;
+  }
+
+  .animate-bounce-fast {
+    animation: custom-bounce 0.5s infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* move up slightly */
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite; /* smooth & slow */
+  }
+}

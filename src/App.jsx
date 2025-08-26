@@ -1,12 +1,17 @@
 import './App.css';
-import Navbar from "./components/navbar" 
+import Navbar from "./components/navbar"
+import HeroCarousel from './components/heroCarousel'; 
+import { Theme } from '@radix-ui/themes';
 
 
 function App() {
 
   return (
     <>
-      <Navbar/>
+      <Theme>
+        <Navbar/>
+        <HeroCarousel/>
+      </Theme>
       
     </>
   )
