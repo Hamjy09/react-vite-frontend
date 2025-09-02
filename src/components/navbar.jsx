@@ -1,18 +1,15 @@
-import React, { useState } from "react";
-import Sidebar from "./sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import Navigation from "./navigation";
 
 library.add(fas, far, fab);
 
 import VerticleMarquee from "./marque";
 
-const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
+const Navbar = (props) => {
   return (
     <div>
       <VerticleMarquee />
@@ -22,13 +19,13 @@ const Navbar = () => {
           <FontAwesomeIcon
             icon="fa-solid fa-bars"
             className="text-2xl text-blue-500 cursor-pointer"
-            onClick={() => setSidebarOpen(true)}
+            onClick={props.openNav}
           />
         </div>
 
         {/* Logo */}
         <div className="flex-shrink-0">
-          <img src="src/assets/logo.svg" alt="logo" className="w-40 h-auto" />
+          <img src="src/assets/logo.svg" alt="logo" className="md:w-40 w-25 h-auto" />
         </div>
 
         {/* Search input for md and above */}
@@ -45,36 +42,34 @@ const Navbar = () => {
         </div>
 
         {/* Other icons */}
-        <div className="flex gap-4 md:gap-6 items-center mr-3">
+        <div className="flex gap-3 md:gap-6 items-center mr-2">
           {/* Search icon for mobile hidden on md and above */}
           <div className="block md:hidden">
             <FontAwesomeIcon
               icon="fa-solid fa-search"
-              className="text-xl text-blue-500 cursor-pointer"
+              className="text-lg md:text-xl text-blue-500 cursor-pointer"
             />
           </div>
           <FontAwesomeIcon
             icon="fa-solid fa-headset"
-            className="text-xl text-blue-400 cursor-pointer"
+            className="text-lg md:text-xl text-blue-400 cursor-pointer"
           />
           <FontAwesomeIcon
             icon="fa-solid fa-user"
-            className="text-xl text-blue-400 cursor-pointer"
+            className="text-lg md:text-xl text-blue-400 cursor-pointer"
           />
           <div className="relative">
             <FontAwesomeIcon
               icon="fa-solid fa-shopping-cart"
-              className="text-xl text-blue-400 cursor-pointer"
+              className="text-lg md:text-xl text-blue-400 cursor-pointer"
             />
-            <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+            <span className="absolute -top-2 right-0 md:-right-2 bg-blue-600 text-white text-[10px] md:text-xs w-4 h-4 flex items-center justify-center rounded-full">
               0
             </span>
           </div>
         </div>
       </nav>
-
-      {/* Sidebar component */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Navigation />
     </div>
   );
 };

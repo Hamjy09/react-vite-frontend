@@ -1,10 +1,10 @@
-import React from "react";
+
 
 const Sidebar = (props) => {
   if (!props.isOpen) return null;
 
   return (
-    <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-2000 ease-in-out ${
+    <div className={`fixed top-0 right-0 z-30 h-full w-64 bg-white shadow-lg transform transition-transform duration-2000 ease-in-out ${
     props.isOpen ? "translate-x-0" : "translate-x-full"
   }`}
   >

@@ -35,31 +35,30 @@ export default function HeroCarousel() {
       lnglastingText: "Long Lasting",
       alcoholText: "Alcohol Free",
       affordText: "Affordable Price",
-      alcoholicon: "",
     },
     {
       bg: "src/assets/fading-blue-background.jpg",
-      title: "Slide Two",
-      subtitle: "Another description",
+      titleTwo: "Slide Two",
+      subtitleTwo: "Another description",
       overlayImg: "src/assets/slide1.webp",
     },
     {
       bg: "src/assets/fading-blue-background.jpg",
-      title: "Slide Three",
-      subtitle: "Third slide text",
+      titleThird: "Slide Three",
+      subtitleThird: "Third slide text",
       overlayImg: "src/assets/slide1.webp",
       btnText: "See More",
     },
     {
       bg: "src/assets/fading-blue-background.jpg",
-      title: "Slide Three",
-      subtitle: "Third slide text",
+      titleFour: "Slide Three",
+      subtitleFour: "Third slide text",
       overlayImg: "src/assets/slide1.webp",
     },
     {
       bg: "src/assets/fading-blue-background.jpg",
-      title: "Slide Three",
-      subtitle: "Third slide text",
+      titleFive: "Slide Three",
+      subtitleFive: "Third slide text",
       overlayImg: "src/assets/slide1.webp",
     },
   ];
@@ -78,9 +77,6 @@ export default function HeroCarousel() {
               backgroundPosition: "center",
             }}
           >
-            {/* Dark overlay */}
-            {/* <div className="absolute inset-0 bg-black/40"></div> */}
-
             {/* Content overlay */}
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 px-4">
               <img
@@ -90,21 +86,26 @@ export default function HeroCarousel() {
               />
 
               {/* Text block */}
-              <div className="order-2 md:order-1 flex flex-col gap-4 justify-center text-center md:text-left text-white md:ml-6">
-                <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">
-                  {slide.title}
-                </h2>
-                <p className="mt-1 text-base sm:text-lg md:text-2xl">
-                  {slide.subtitle}
-                </p>
+              <div>
+                <div>
+                  {slide.btnText?  <div className="order-2 md:order-1 flex flex-col gap-4 justify-center text-center md:text-left text-white md:ml-6">
+                  <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">
+                    {slide.title}
+                  </h2>
+                  <p className="mt-1 text-base sm:text-lg md:text-2xl">
+                    {slide.subtitle}
+                  </p>
 
-                {slide.btnText && (
-                  <button className="self-center md:self-start inline-block w-[10rem] rounded-lg bg-[#2a27e9] px-8 md:px-10 py-2.5 md:py-3 text-sm md:text-md font-medium text-white transition-colors duration-300 ease-in-out hover:bg-[#120FBF] focus:outline-hidden">
-                    {slide.btnText}
-                  </button>
-                )}
+                  {slide.btnText && (
+                    <button className="self-center md:self-start inline-block w-[10rem] rounded-lg bg-[#2a27e9] px-8 md:px-10 py-2.5 md:py-3 text-sm md:text-md font-medium text-white transition-colors duration-300 ease-in-out hover:bg-[#120FBF] focus:outline-hidden">
+                      {slide.btnText}
+                    </button>
+                  )}
+                </div> : ""}
+                </div>
+
+               
               </div>
-
               {/* ICONS-----*/}
               <div className="hidden md:flex order-3 flex-col gap-6 justify-center text-center text-white mr-6">
                 <div className="flex flex-col items-center">
