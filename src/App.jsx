@@ -8,6 +8,11 @@ import Recomend from './components/recomend';
 import TopRated from './components/topRated' ;
 import SpecialOffer from './components/specialOffer';
 import NewProducts  from './components/newProducts';
+import ExclusiveProducts from './components/exclusiveProducts';
+import WhyUs from './components/whyUs';
+import OurServices from './components/ourServices'
+
+
 
 
 function App() {
@@ -30,7 +35,13 @@ function App() {
         <TopRated/>
         <SpecialOffer/>
        
-           <NewProducts/>
+        <NewProducts/>
+        < ExclusiveProducts/>
+        <WhyUs/>
+        <OurServices />
+      
+       
+       
        
         
       
