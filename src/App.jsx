@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './App.css';
 import Sidebar from "./components/sidebar";
 import Navbar from "./components/navbar"
 import HeroCarousel from './components/heroCarousel';
@@ -10,7 +9,11 @@ import SpecialOffer from './components/specialOffer';
 import NewProducts  from './components/newProducts';
 import ExclusiveProducts from './components/exclusiveProducts';
 import WhyUs from './components/whyUs';
-import OurServices from './components/ourServices'
+import OurServices from './components/ourServices';
+import Footer from './components/footer';
+import About from './components/about';
+import Newsletter from './components/Newsletter';
+import VideoSection from './components/Videosection';
 
 
 
@@ -36,9 +39,18 @@ function App() {
         <SpecialOffer/>
        
         <NewProducts/>
-        < ExclusiveProducts/>
+        {/* < ExclusiveProducts/> */}
+        < VideoSection/>
         <WhyUs/>
         <OurServices />
+        <About/>
+        <Newsletter/>
+
+
+
+
+
+        <Footer/>
       
        
        

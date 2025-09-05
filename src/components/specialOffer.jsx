@@ -4,12 +4,17 @@ const SpecialOffer = () => {
   return (
     <div
       className="relative bg-purple-700 text-white flex flex-col md:flex-row items-center justify-center 
-min-h-[400px] md:min-h-[550px] rounded-2xl 
-max-w-[1200px] w-full mx-auto my-2 px-1"
+  min-h-[400px] md:min-h-[550px] rounded-2xl 
+  max-w-[1200px] w-full mx-auto my-2 px-4 sm:px-6 md:px-10"
     >
       {/* Left side - Phone Image */}
       <div className="relative w-full md:w-1/2 flex justify-center">
-        <img src="src\assets\mouse.webp" alt="Phone" className="w-72 md:w-80" />
+        <img
+          src="src/assets/mouse.webp"
+          alt="Phone"
+          className="w-[80%] max-w-[250px] md:max-w-[320px] h-auto object-contain"
+        />
+
         {/* Discount Circle */}
         <div className="absolute top-10 right-16 bg-yellow-400 text-black font-bold rounded-full w-20 h-20 flex items-center justify-center border-2 border-dashed border-yellow-700">
           -33%

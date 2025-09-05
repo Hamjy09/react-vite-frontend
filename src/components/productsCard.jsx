@@ -1,51 +1,46 @@
 import React from "react";
-import { Star,  StarHalf } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 
-const productsCard = (props) => {
+const ProductsCard = (props) => {
   return (
-    <div>
+    <div className={`${props.cardStyles}`}>
       <section>
-        <div className={props.cardStyles}>
-          <ul className="mt-1  gap-4">
-            <li>
-              <div
-                href="#"
-                className="group block overflow-hidden  bg-white rounded-2xl"
-              >
-                <div className="">
-                  <img
-                    src="src/assets/mouse.webp"
-                    alt=""
-                    className="h-[300px] w-[450px] object-contain mx-auto transition duration-500 group-hover:scale-105"
-                  />
-                </div>
+        <ul className="mt-1 gap-4">
+          <li>
+            <div className="group block overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-md transition p-3 sm:p-4 md:p-6">
+              {/* Image Section */}
+              <div className="w-full flex justify-center">
+                <img
+                  src="src/assets/mouse.webp"
+                  alt=""
+                  className="h-36 sm:h-44 md:h-56 lg:h-64 w-full object-contain transition duration-500 group-hover:scale-105"
+                />
+              </div>
 
-                <div className="relative bg-white  mb-8">
-                  <div className="flex items-center flex-col gap-2">
-                    <h3 className="text-2xl text-gray-700">
-                      Basic Shirt
-                    </h3>
-                    <div className="flex text-blue-600">
-                      <Star size={15} strokeWidth={1} fill="blue"/>
-                      <Star size={15} strokeWidth={1} fill="blue"/>
-                      <Star size={15} strokeWidth={1} fill="blue" />
-                      <Star size={15} strokeWidth={1} fill="blue"/>
-                      < StarHalf size={15} strokeWidth={1} fill="blue"/>
-                    </div>
-
-                    <span className="tracking-wider text-blue-700 font-bold">
-        
-                      $24.00 GBP
-                    </span>
+              {/* Text Section */}
+              <div className="relative bg-white mt-3">
+                <div className="flex items-center flex-col gap-1 sm:gap-2 text-center px-1 sm:px-2">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                    Basic Shirt
+                  </h3>
+                  <div className="flex text-blue-600">
+                    <Star size={14} strokeWidth={1} fill="blue" />
+                    <Star size={14} strokeWidth={1} fill="blue" />
+                    <Star size={14} strokeWidth={1} fill="blue" />
+                    <Star size={14} strokeWidth={1} fill="blue" />
+                    <StarHalf size={14} strokeWidth={1} fill="blue" />
                   </div>
+                  <span className="tracking-wider text-blue-700 font-bold text-sm sm:text-base md:text-lg">
+                    $24.00 GBP
+                  </span>
                 </div>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </li>
+        </ul>
       </section>
     </div>
   );
 };
 
-export default productsCard;
+export default ProductsCard;
