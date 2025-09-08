@@ -14,6 +14,7 @@ import Footer from './components/footer';
 import About from './components/about';
 import Newsletter from './components/Newsletter';
 import VideoSection from './components/Videosection';
+import FloatingContact from './components/floatingcontact';
 
 
 
@@ -45,7 +46,7 @@ function App() {
         <OurServices />
         <About/>
         <Newsletter/>
-
+        <FloatingContact/>
 
 
 
